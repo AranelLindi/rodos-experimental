@@ -1,5 +1,3 @@
-#include "rodos.h" // RODOS
-
 #include "main.h"
 
 
@@ -30,9 +28,9 @@ GregorianCalendar& operator++(GregorianCalendar& temp, int) {
             // Stunde wird inkrementiert
             if (temp.hour +1 == 24) {
                 // Tag wird inkrementiert
-                if (temp.day +1 > getNumberOfDaysInMonth(temp.year, temp.month)) { // HIER: == IN > GEÄNDERT!
+                if (temp.day +1 > getNumberOfDaysInMonth(temp.year, temp.month)) {
                     // Monat wird inkrementiert
-                    if (temp.month +1 > 12) { // HIER: == IN > GEÄNDERT!
+                    if (temp.month +1 > 12) {
                         // Jahr wird inkrementiert
                         temp.year++;
                         temp.month = 1;
@@ -69,7 +67,7 @@ GregorianCalendar& operator++(GregorianCalendar& temp, int) {
 }
 
 
-GregorianCalendar start = {2020,6,14,23,58,0}; // Beginnt am 01.01.2020 0:0:0 Uhr
+GregorianCalendar start = {2020,6,14,23,58,0}; // Startzeitpunkt
 
 
 static Application DateIncremention("Date Incremention");
